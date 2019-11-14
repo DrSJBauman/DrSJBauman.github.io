@@ -110,6 +110,7 @@ header h1 {
 
 @media screen and (max-width: 1100px) {
     header {
+        font-size: 10em;
         height: 200px;
         /* background-size: auto; */
     }
@@ -141,7 +142,9 @@ header h1 {
 
 .description {
     font-size: 25px;
+    line-height: 35px;
     margin: 20px;
+    padding: 0% 10%;
     text-align: center;
 }
 
@@ -151,6 +154,7 @@ header h1 {
     display: flex;
     flex-direction: row;
     margin: 30px;
+    /* width: 100%; */
 }
 
 .features figure {
@@ -169,9 +173,18 @@ header h1 {
     /* width: 90%;  */
 }
 
+/* .features figure img:hover {
+    height: 325px;
+} */
+
 div.page {
     color: black;
 }
+
+/* p#HomeText {
+    position: center;
+    width: 75%;
+} */
 
 /* ////////////////////// */
 /*FOOTER*/
