@@ -1,6 +1,6 @@
-/* ////////////////////// */
-/*STYLES*/
-/* ////////////////////// */
+/* ////////////////////////////////////////// */
+/*///////////////   STYLES   /////////////////*/
+/* ////////////////////////////////////////// */
 
 body{
     background: white;
@@ -18,7 +18,7 @@ header{
     background-color: rgb(50,50,50);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: center;
+    background-position: center center;
     height: 500px;
     padding: 20px;
     text-align: center;
@@ -65,7 +65,7 @@ nav ul li.logo {
     background-repeat: no-repeat;
     background-size: 200px;
     border-radius: 50%;
-    height: 100px;
+    /* height: 100px; */
     width: 150px;
 }
 
@@ -90,7 +90,7 @@ li.logo a:hover {
     font-size: 45px;
 }
 
-div.pageDescript {
+h1.pageDescript {
     display: inline-block;
     text-align: center;
     width: auto;
@@ -104,15 +104,18 @@ header h1 {
     padding: 10px;    
 }
 
+img.pageImg {
+    width: 75%;
+}
+
 /* ////////////////////// */
 /*RESPONSIVE RULES */
 /* ////////////////////// */
 
 @media screen and (max-width: 1100px) {
     header {
-        font-size: 10em;
-        height: 200px;
-        /* background-size: auto; */
+        background-size: 100% 100%;
+        /* line-height: 30px; */
     }
     header .mobile {
         display: inline-block;
@@ -123,17 +126,28 @@ header h1 {
         display: none;
     }
     nav li {
+        /* font-size: 10vw; */
+        line-height: 20px;
         margin: 0;
     }
     header .logo {
-        /* background-size: 85%; */
+        background-size: 85%;
         height: 100px;
         margin: 20px 0 0 0;
     }
-    .logo:hover {
-        background-color: none;
+
+    header nav ul li.logo a {
+        color: white;
     }
 
+    div.pageDescript {
+        height: 50px;
+    }
+
+    div.pageDescript h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
 }
 
 /* ////////////////////// */
@@ -144,20 +158,28 @@ header h1 {
     font-size: 25px;
     line-height: 35px;
     margin: 20px;
-    padding: 0% 10%;
+    padding: 0% 20%;
     text-align: center;
 }
 
-.features {
+div.page {
+    color: black;
+}
+
+p.bodyText {
+    text-align: justify;
+}
+
+section.features {
     background: white;
     color: gray;
     display: flex;
     flex-direction: row;
     margin: 30px;
-    /* width: 100%; */
+    width: 100%;
 }
 
-.features figure {
+section.features figure {
     margin: auto;
     text-align: center;
     text-transform: uppercase;
@@ -165,25 +187,17 @@ header h1 {
     height: 100%;
 }
 
-.features figure img {
+section.features figure img {
     border: 1px solid white;
     border-radius: 20%;
     box-shadow: green 0 0 10px;
-    height: 300px;
-    /* width: 90%;  */
+    height: 300px;                  /*This is the section that needs to be made responsive still*/
+    /* object-fit: scale-down; */
+    /* width: auto;  */
 }
 
 /* .features figure img:hover {
     height: 325px;
-} */
-
-div.page {
-    color: black;
-}
-
-/* p#HomeText {
-    position: center;
-    width: 75%;
 } */
 
 /* ////////////////////// */
