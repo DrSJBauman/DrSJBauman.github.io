@@ -3,11 +3,14 @@
 /* ////////////////////////////////////////// */
 
 body{
-    background: white;
+    background: rgb(200,200,200);
     color: black;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    height: 100%;
     margin: 0;
+    overflow-x: hidden;
     padding: 0;
+    width: 100%;
 }
 
 /* ////////////////////// */
@@ -23,6 +26,7 @@ header{
     padding: 20px;
     text-align: center;
     vertical-align: middle;
+    width: 100%;
 }
 
 header a {
@@ -65,7 +69,6 @@ nav ul li.logo {
     background-repeat: no-repeat;
     background-size: 200px;
     border-radius: 50%;
-    /* height: 100px; */
     width: 150px;
 }
 
@@ -105,100 +108,66 @@ header h1 {
 }
 
 img.pageImg {
-    width: 75%;
-}
-
-/* ////////////////////// */
-/*RESPONSIVE RULES */
-/* ////////////////////// */
-
-@media screen and (max-width: 1100px) {
-    header {
-        background-size: 100% 100%;
-        /* line-height: 30px; */
-    }
-    header .mobile {
-        display: inline-block;
-        margin: 10px 5px;
-        flex-wrap: wrap;
-    }
-    header .desktop {
-        display: none;
-    }
-    nav li {
-        /* font-size: 10vw; */
-        line-height: 20px;
-        margin: 0;
-    }
-    header .logo {
-        background-size: 85%;
-        height: 100px;
-        margin: 20px 0 0 0;
-    }
-
-    header nav ul li.logo a {
-        color: white;
-    }
-
-    div.pageDescript {
-        height: 50px;
-    }
-
-    div.pageDescript h1 {
-        font-size: 30px;
-        line-height: 40px;
-    }
+    max-height: 350px;
+    max-width: 95%;
 }
 
 /* ////////////////////// */
 /*MIDDLE SECTION*/
 /* ////////////////////// */
 
-.description {
-    font-size: 25px;
-    line-height: 35px;
-    margin: 20px;
-    padding: 0% 20%;
-    text-align: center;
+section {
+    background-color: rgb(200,200,200);
+    background-position-x: center;
 }
+
 
 div.page {
     color: black;
+    width: 100%
 }
 
 p.bodyText {
     text-align: justify;
+    text-indent: 35px;
+}
+
+.description {
+    font-size: 25px;
+    line-height: 35px;
+    margin: 0;
+    padding: 10px 20%;
+    text-align: center;
 }
 
 section.features {
-    background: white;
     color: gray;
     display: flex;
     flex-direction: row;
-    margin: 30px;
-    width: 100%;
+    margin: 0;
+    padding: 10px;
 }
 
 section.features figure {
-    margin: auto;
+    color: rgb(50,50,50);
+    font-weight: bold;
+    height: 100%;
+    margin: 20px;
     text-align: center;
     text-transform: uppercase;
     width: 33%;
-    height: 100%;
 }
 
 section.features figure img {
     border: 1px solid white;
     border-radius: 20%;
     box-shadow: green 0 0 10px;
-    height: 300px;                  /*This is the section that needs to be made responsive still*/
+    height: 20em;                  /*This is the section that needs to be made responsive still*/
     /* object-fit: scale-down; */
     /* width: auto;  */
+    max-width: 100%;
 }
 
-/* .features figure img:hover {
-    height: 325px;
-} */
 
 /* ////////////////////// */
 /*FOOTER*/
@@ -210,6 +179,7 @@ footer {
     font-size: 15px;
     padding: 10px 20px;
     text-align: center;
+    width: 100%;
 }
 
 footer div {
@@ -226,3 +196,52 @@ footer img:hover {
     height: 4em;
 }
 
+/* ////////////////////// */
+/*RESPONSIVE RULES */
+/* ////////////////////// */
+
+@media screen and (max-width: 1100px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    header {
+        background-size: 100% 100%;
+        width: 100%;
+    }
+    header .mobile {
+        display: inline-block;
+        margin: 10px 5px;
+        flex-wrap: wrap;
+    }
+    header .desktop {
+        display: none;
+    }
+    nav li {
+        line-height: 20px;
+        margin: 0;
+    }
+    header .logo {
+        background-size: 65%;
+        height: 100px;
+        margin: 20px 0 0 0;
+    }
+
+    header nav ul li.logo a {
+        color: white;
+    }
+
+    section.features {
+        width: 100%;
+    }
+
+    p.bodyText {
+        text-align: left;
+    }
+
+    footer div {
+        margin: 0 5px;
+    }
+
+}
