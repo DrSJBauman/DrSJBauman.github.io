@@ -1,32 +1,48 @@
+/* ////////////////////////////////////////// */
+/*///////////////   STYLES   /////////////////*/
+/* ////////////////////////////////////////// */
+
 body{
-    background: white;
-    color: white;
+    background: rgb(200,200,200);
+    color: black;
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    height: 100%;
     margin: 0;
+    overflow-x: hidden;
     padding: 0;
+    width: 100%;
 }
 
+/* ////////////////////// */
 /*HEADER*/
+/* ////////////////////// */
 
 header{
-    background-color: none;
-    background-image: url("images/space battle 2.jpg");
+    background-color: rgb(50,50,50);
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 400px;
+    background-position: center center;
+    height: 500px;
     padding: 20px;
     text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+header a {
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 header .mobile {
     display: none;
 }
 
-header a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: inline-block;
+nav {
+    margin: 5px;
 }
 
 nav ul {
@@ -35,153 +51,197 @@ nav ul {
     padding: 0;
 }
 
-nav li {
-    background-color: none;
-    border-radius: 40%;
+nav ul li {
+    background-color: rgb(50,50,50);
+    border-radius: 10px;
     color: white;
     display: inline-block;
-    margin: 50px 20px 0 0;
-    padding: 5px;
-}
-
-header .logo {
-    /* background-color: white; */
-    background-image: url("images/sci fi omnitool.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    /* background-size: 300px; */
-    background-size: 100%;
-    border-radius: 50%;
-    display: inline-block;
-    height: 150px;
-    margin:  0 20px 0 0;
-    padding: 0;
-    position: relative;
-    text-indent: -9999999px;
-    top: -65px;
-    width: 250px;
-}
-
-nav li:hover {
-    background-color: green;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/*RESPONSIVE RULES */
-@media screen and (max-width: 500px) {
-    header {
-        padding: 5px;
-    }
-    header .mobile {
-        margin: 20px 2px;
-        /* font-size: 10%; */
-    }
-    header .logo {
-        margin: 0;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    /* This shit isn't working to override many of
-    the effects that are already in place above... */
-    header {
-        height: 200px;
-    }
-    header .mobile {
-        display: inline-block;
-        margin: 10px 10px;
-        /* flex-wrap: wrap; */
-    }
-    header .desktop {
-        display: none;
-    }
-    nav li {
-        margin: 10px;
-    }
-    header .logo {
-        background-size: 85%;
-        height: 100px;
-        margin: 50px 0 0 0;
-        /* position: 0 -20px; */
-        /* width: 200px; */
-        /* top: 1000px; */
-    }
-    .logo:hover {
-        background-color: none;
-    }
-
-}
-
-/*MIDDLE SECTION*/
-
-h1 {
-    color: black;
+    line-height: 20px;
+    margin: 0 20px;
+    padding: 10px;
     text-align: center;
 }
 
-.features {
-    background: white;
+nav ul li.logo {
+    background-image: url("images/sci fi omnitool.jpg");
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: 200px;
+    border-radius: 50%;
+    width: 150px;
+}
+
+header nav ul li.logo a{
+    color: rgb(200,200,200);
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 100px;
+}
+
+nav li:hover {
+    background-color: rgba(6, 95, 6, 0.849);
+}
+
+nav a:hover {
+    font-weight: bold;
+    color: white;
+}
+
+li.logo a:hover {
+    color: white;
+    font-size: 45px;
+}
+
+h1.pageDescript {
+    display: inline-block;
+    text-align: center;
+    width: auto;
+}
+
+header h1 {
+    background-color: rgb(50,50,50); 
+    border-radius: 20px;
+    color: white;"
+    font-size: 40px;
+    padding: 10px;    
+}
+
+img.pageImg {
+    max-height: 350px;
+    max-width: 95%;
+}
+
+/* ////////////////////// */
+/*MIDDLE SECTION*/
+/* ////////////////////// */
+
+section {
+    background-color: rgb(200,200,200);
+    background-position-x: center;
+}
+
+
+div.page {
+    color: black;
+    width: 100%
+}
+
+p.bodyText {
+    text-align: justify;
+    text-indent: 35px;
+}
+
+.description {
+    font-size: 25px;
+    line-height: 35px;
+    margin: 0;
+    padding: 10px 20%;
+    text-align: center;
+}
+
+section.features {
     color: gray;
     display: flex;
     flex-direction: row;
+    margin: 0;
+    padding: 10px;
 }
 
-.features figure {
-    margin: auto;
+section.features figure {
+    color: rgb(50,50,50);
+    font-weight: bold;
+    height: 100%;
+    margin: 20px;
     text-align: center;
     text-transform: uppercase;
     width: 33%;
 }
 
-.features figure img {
+section.features figure img {
     border: 1px solid white;
-    border-radius: 50%;
+    border-radius: 20%;
     box-shadow: green 0 0 10px;
-    width: 90%;
+    height: 20em;                  /*This is the section that needs to be made responsive still*/
+    /* object-fit: scale-down; */
+    /* width: auto;  */
+    max-width: 100%;
 }
 
 
-/*JS PRACTICE STUFF*/
-
-img {
-    width: 200px;
-}
-
-.hide {
-    display: none;
-}
-
-h2 {
-    color: black;
-}
-
-main {
-    color: black;
-    text-align: center;
-}
-
-li input {
-    display: none;
-}
-
-li.edit span {
-    display: none;
-}
-
-li.edit input {
-    display: initial;
-}
-
+/* ////////////////////// */
 /*FOOTER*/
+/* ////////////////////// */
 
-footer{
+footer {
     background: black;
-    color: gray;
+    color: rgb(199, 199, 199);
     font-size: 15px;
     padding: 10px 20px;
     text-align: center;
+    width: 100%;
 }
 
+footer div {
+    display: inline-block;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+
+footer img {
+    height: 3em;
+}
+
+footer img:hover {
+    height: 4em;
+}
+
+/* ////////////////////// */
+/*RESPONSIVE RULES */
+/* ////////////////////// */
+
+@media screen and (max-width: 1100px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    header {
+        background-size: 100% 100%;
+        width: 100%;
+    }
+    header .mobile {
+        display: inline-block;
+        margin: 10px 5px;
+        flex-wrap: wrap;
+    }
+    header .desktop {
+        display: none;
+    }
+    nav li {
+        line-height: 20px;
+        margin: 0;
+    }
+    header .logo {
+        background-size: 65%;
+        height: 100px;
+        margin: 20px 0 0 0;
+    }
+
+    header nav ul li.logo a {
+        color: white;
+    }
+
+    section.features {
+        width: 100%;
+    }
+
+    p.bodyText {
+        text-align: left;
+    }
+
+    footer div {
+        margin: 0 5px;
+    }
+
+}
